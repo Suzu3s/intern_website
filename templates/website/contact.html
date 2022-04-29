@@ -1,0 +1,32 @@
+{% extends 'website/main.html'   %} <!----here we can inherit the main.html template---->
+
+{% block content %}
+<section id="top-header">
+    <div class="container">
+     <ul>
+         <li>
+             <a href=""><i class="fa-solid fa-house"></i> Home</a>
+         </li>
+         <li>
+            <a href=""><i class="fa-solid fa-award"></i> About</a>
+        </li>
+        <li>
+            <a href=""><i class="fa-regular fa-envelope"></i> Contact</a>
+        </li>
+        <li>
+            <a href="">Indian Rupees</a>
+            <ul>
+                <li><a href="">A</a></li>
+                <li><a href="">B</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href=""><i class="fa-solid fa-truck"></i> Delivery</a>
+        </li>
+     </ul>
+    </div>
+    </section>
+
+
+
+{% endblock %}
