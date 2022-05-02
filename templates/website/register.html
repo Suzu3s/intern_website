@@ -2,41 +2,7 @@
 
 {% block content %}
 
-<!--<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="signupModalLabel">Your Personal Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3"  method="POST" action="">  <!-------->
-  <!----          {% csrf_token %}
-            <div class="col-md-6">
-              <label for="inputFirstName" class="form-label">First Name</label>
-              <input type="firstname" class="form-control" id="inputFirstName">  <!---- {{form.username}}-->
-   <!----         </div>
-            <div class="col-md-6">
-              <label for="inputLastName" class="form-label">Last Name</label>
-              <input type="lastname" class="form-control" id="inputLastName">
-            </div>
-  
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-              <label for="inputTelephone" class="form-label">Telephone</label>
-              <input type="telephone" class="form-control" id="inputTelephone">
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-md-6">
-              <label for="cinputPassword4" class="form-label">Confirm Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
-            </div>
+<!--
   
             <div class="col-12">
               <label for="cinputPassword4" class="form-label">Subscribe</label>
@@ -63,9 +29,15 @@
     </div>
   </div>------>
 
- <h2>Register</h2>
+<!---- <h2>Register</h2>
   <form method ="POST" action="">
       {% csrf_token %}
+      {{form.first_name.label}}
+        {{form.first_name}}
+
+        {{form.last_name.label}}
+        {{form.last_name}}
+
         {{form.username.label}}
         {{form.username}}
 
@@ -131,14 +103,13 @@
               </div>
             </form>
           </div>
-        </div>
+        </div>------>
 
 
  
   
   
- <!---- <!DOCTYPE html>
-  <html>
+ 
       
   <head>
     <title>Login</title>
@@ -154,6 +125,13 @@
         height: 100%;
         background: #7abecc !important;
       }
+
+      div.main{
+        width: 400px;
+        margin: 100px auto 0px auto;
+      }
+
+   
       .user_card {
         width: 350px;
         margin-top: auto;
@@ -202,11 +180,11 @@
         outline: 0px !important;
       }
   
-    </style>
+    </style> 
   
-  </head>
+ </head>
   <body>
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+   
     <div class="container h-100" >
       
       <div class="d-flex justify-content-center h-100">
@@ -224,6 +202,9 @@
                 </div>
                 {{form.username}}
               </div>
+
+              
+
               <div class="input-group mb-2">
                 <div class="input-group-append">
                   <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
@@ -267,7 +248,7 @@
       //We start indexing at one because CSRF_token is considered and input field 
        */
   
-      //Query All input fields
+     //Query All input fields
       var form_fields = document.getElementsByTagName('input')
       form_fields[1].placeholder='Username..';
       form_fields[2].placeholder='Email..';
@@ -281,7 +262,32 @@
     </script>
   </body>
 </div>
-  </html>---->
+  
+
+<!-----  <body>
+     <div class="main">
+     <div class="register">
+       <h2>Register here</h2>
+       <form action="" method="POST">
+         {% csrf_token %}
+         <label>First Name</label>
+         <input type="text" name="first_name" placeholder="Enter Your Name"><br><br>
+         <label>Last Name</label>
+         <input type="text" name="last_name" placeholder="Enter Your Last Name"><br><br>
+         <label>User Name</label>
+         <input type="text" name="username" placeholder="Enter Your User Name"><br><br>
+         <label>Email</label>
+         <input type="email" name="email" placeholder="Enter Your Email"><br><br>
+         <label>Password</label>
+         <input type="password" name="password1" placeholder="Enter Your Password"><br><br>
+         <label>Confirm Password</label>
+         <input type="password" name="password2" placeholder="Enter Your Password again"><br><br>
+         <button type="submit">Continue</button>
+       </form>
+     </div>
+   </div>
+  </body>
+   </html>---->
 
 
 
@@ -290,6 +296,5 @@
   
          
       
-
 
 {% endblock %}

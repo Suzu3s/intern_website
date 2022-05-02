@@ -377,6 +377,7 @@ header, section {
     }
 }
 
+
 /*------------------------login-------------*/
 #search .container .hello{
     position: relative;
@@ -493,7 +494,7 @@ header, section {
 #people .card:hover{
       
     transform: scale(1.05);
-    box-shadow: rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*-------------------black partition--------------*/
